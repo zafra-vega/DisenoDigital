@@ -1,0 +1,80 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background: rgb(36,70,122);
+    background: linear-gradient(128deg, rgba(36,70,122,1) 0%, rgba(66,117,195,1) 35%, rgba(81,118,163,1) 100%);
+}
+
+.logo{
+    padding-top: 15px;
+    max-width: 15%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contenido {
+    font-size: 20px;
+    text-align: justify;
+}
+
+.main {
+    font-family: sans-serif;
+    line-height: 33px;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.menu {
+    padding-bottom: 50px;
+    list-style-type: none;
+    background-color: #25477A;
+    margin: 0;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.menu li {
+    float: right;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px 16px;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    background-color: #5176a3;
+  }
+
+.card {
+    padding: 50px;
+    max-width: 1500px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.sec-1 {
+    background-color: #24467a;
+    color: white;
+}
+
+.sec-2 {
+    background-color: #C7A02C;
+    color: white;
+}
+
+.sub-titulo {
+  font-family: 'Great Vibes', cursive;
+    text-align: center;
+    margin-bottom: 40px;
+}
