@@ -1,133 +1,190 @@
-.sec-1 {
+* {
+    box-sizing: border-box;
+  }
+  .principal{
+      position: relative;
+  }
+  body {
     background-color: #24467a;
-    color: white;
-}
-
-.timeline-border {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    margin-left: -71px;
-    width: 0;
-    border-left: 1px dashed #CCC;
-    height: 100%;
-}
-
-.entry.entry-date-section span {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #FFF;
-    border: 2px solid #f8c700;
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-family: 'Roboto',sans-serif;
-}
-
-.entry.entry-date-section {
-    width: 100%!important;
-    margin: 50px -70px 80px;
-    padding: 0;
-    border: 0;
-    text-align: center;
-}
-
-
-.c-azul{
-    color: #25477A;
-}
-
-
- .container {
+    font-family: Helvetica, sans-serif;
+  }
+  
+  /* Regla linea de tiempo */
+  .timeline {
     position: relative;
-}
-
-.container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.clearfix:before, .clearfix:after {
-    display: table;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Regla linea de tiempo */
+  .timeline::after {
     content: '';
-}
-
-.post-timeline .entry {
-    width: 500px!important;
-    margin-right: 140px!important;
-    padding-right: 0!important;
-}
-
-.post-timeline .entry-timeline {
-    display: none;
     position: absolute;
-    border: 2px solid #f8c700;
-    background-color: #FFF;
-    padding-top: 0;
-    text-indent: -9999px;
-    top: 40px;
-    left: auto;
-    right: -76px;
-    width: 13px;
-    height: 13px;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  /* contenedor alrededor del content */
+  .contenedor {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* Los circulos de la linea de tiempo */
+  .contenedor::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #C7A02C;
+    top: 15px;
     border-radius: 50%;
-    font-size: 26px;
-    font-weight: 700;
-    color: #AAA;
-    text-align: center;
-    line-height: 1;
-    -webkit-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-}
-
-.post-masonry .entry-image, .post-masonry .entry-image img {
-    height: auto!important;
-}
-
-.b-r-5, .b-r-5 img, .b-r-5 video {
-    border-radius: 5px!important;
-}
-
-.entry-image, .entry-image>a, .entry-image .slide a, .entry-image img {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: auto;
-}
-
-.entry-image {
-    margin-bottom: 30px;
-}
-
-.entry-image, .entry-image>a, .entry-image .slide a, .entry-image img {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: auto;
-}
-
-.post-timeline .entry-timeline div.timeline-divider {
-    position: absolute;
-    top: 4px;
-    left: -58px;
-    width: 50px;
+    z-index: 1;
+  }
+  
+  /* Lugar del contenedor izquierdo */
+  .left {
+    left: 0;
+  }
+  
+  /* Lugar del contenedor derecho */
+  .right {
+    left: 50%;
+  }
+  
+  /* Agrega las filas al izquierda */
+  .left::before {
+    content: " ";
     height: 0;
-    border-top: 1px dashed #CCC;
-    -webkit-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+  
+  /* Agrega filas a la derecha */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  
+  /* coloca el circulo a la derecha */
+  .right::after {
+    left: -16px;
+  }
+  
+  /* El contenido */
+  .content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+  }
+  /*Sombra al momento de poner el cursor*/
+  .content:hover {
+      -webkit-box-shadow: 4px 13px 70px -4px rgba(230,179,37,1);
+      -moz-box-shadow: 4px 13px 70px -4px rgba(230,179,37,1);
+      box-shadow: 4px 13px 70px -4px rgba(230,179,37,1);
+  }
+  
+  /* Pa que se haga responsivo */
+  @media screen and (max-width: 600px) {
+    /* Coloca a la izquierda */
+    .timeline::after {
+    left: 31px;
+    }
+    
+    /* Contenedores full */
+    .contenedor {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    }
+    
+    /*asegura de que todas las flechas apunten hacia la izquierda  */
+    .contenedor::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+    }
+  
+    /* Pone todos los círculos estén en el mismo lugar.  */
+    .left::after, .right::after {
+    left: 15px;
+    }
+    
+    /* Hace que los contenedores se ponen a la izquierda */
+    .right {
+    left: 0%;
+    }
+  }
+  /*Pal titulo*/
+  .page-title {
+position: relative;
+padding: 90px 0 90px;
+background-repeat: no-repeat;
+background-size: cover;
 }
+.page-title:before {
+position: absolute;
+left: 0;
+top: 0;
+content: '';
+width: 100%;
+height: 100%;
+background-color: rgba(0,0,0,.6);
+}
+.auto-container {
+position: static;
+max-width: 1200px;
+padding: 0 15px;
+margin: 0 auto;
+}
+.page-title .contenidoTitulo {
+position: relative;
+padding-left: 20px;
+border-left: 4px solid #C7A02C;
+}.page-title .contenidoTitulo h1 {
+position: relative;
+color: #ffffff;
+font-size: 60px;
+font-weight: 400;
+line-height: 1.2em;
+margin-bottom: 15px;
+}
+.contenidoTitulo {
+    padding: 20px 30px;
+   
+    position: relative;
+    border-radius: 6px;
+  }
 
-.post-timeline .entry:hover .entry-timeline, .post-timeline .entry:hover .timeline-divider {
-    border-color: #0042ac;
-    color: #0042ac;
-}
+  /*Pa las imagenes*/
 
-:active, :focus {
-    outline: none!important;
-}
+  .imagen{
+      width: 100%;
+  }
+  .imagen img{
+      width: 100%;
+  }
