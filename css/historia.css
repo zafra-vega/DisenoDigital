@@ -1,13 +1,57 @@
 body {
     padding: 0px;
     margin: 0px;
-    background: rgb(36,70,122);
-    background: linear-gradient(128deg, rgba(36,70,122,1) 0%, rgba(66,117,195,1) 35%, rgba(81,118,163,1) 100%);
+    background-color: #ecb310;
+}
+
+.imagen-historia {
+    width: 20%; 
+    height: auto;
+    padding-right:25px;
+}
+
+.sub-contenido{
+    width: 50%;
+}
+
+.sub-contenido-2{
+    width: 100%;
+}
+
+.imagen-historia-escalera{
+    width: 60%; 
+    height: auto;
+    padding-top: 10%;
+    padding-left: 10%;
+}
+
+.imagen-historia-diploma{
+    width: 50%; 
+    height: auto;
+    padding-top: 5%;
+    padding-left: 30%;
+}
+
+.imagen-historia-grupo{
+    width: 40%; 
+    height: auto;
+    padding-top: 10%;
+    padding-left: 30%;
+}
+
+.imagen-historia-objetivo{
+    width: 50%; 
+    height: auto;
+    padding-left: 30%;
+}
+
+.contenedor{
+    display: flex;
 }
 
 .logo{
-    padding-top: 15px;
-    max-width: 15%;
+    padding-top: 5%;
+    max-width: 30%;
     height: auto;
     display: block;
     margin-left: auto;
@@ -22,15 +66,20 @@ body {
 .main {
     font-family: sans-serif;
     line-height: 33px;
-    max-width: 1500px;
+    max-width: 80%;
     margin: auto;
 }
 
 .menu {
     padding-bottom: 50px;
     list-style-type: none;
-    background-color: #25477A;
+    background: rgb(36,70,122);
+    background: linear-gradient(128deg, rgba(36,70,122,1) 0%, rgba(66,117,195,1) 35%, rgba(81,118,163,1) 100%);
     margin: 0;
+    padding: 0;
+    width: 100%;
+    position:fixed;
+    
 }
 
 .menu ul {
@@ -41,7 +90,7 @@ body {
 }
 
 .menu li {
-    float: right;
+    float: left;
 }
 
 .menu li a {
@@ -57,25 +106,19 @@ body {
   }
 
 .card {
-    padding: 50px;
-    padding-left: 150px;
-    padding-right: 150px;
-    max-width: 1500px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.sec-1 {
-    background-color: #24467a;
-    color: white;
+    padding: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    max-width: 80%;
+    margin-top: 3%;
+    margin-bottom: 5%;
 }
 
 .sec-2 {
-    background-color: #C7A02C;
-    color: white;
+    background-color: #FFF;
 }
 
 .sub-titulo {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 3%;
 }
